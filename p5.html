@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>문자열 배열 다루기</h1>
+    <hr />
+    <!-- 1. names 배열에 들어있는 각 이름을 출력하라.-->
+    <!-- 2. names 배열에 들어있는 가장 긴 이름.-->
+    <!-- 3. names 배열에 들어있는 사전에서 가장 먼저나오는 이름.-->
+    <!-- 4. names 배열에 들어있는 증가 순으로 정렬하여 출력.-->
+    <script>
+      let names = new Array("wonson", "jaemoomlee", "kitae", "gracehwang");
+      document.write("이름 : ");
+      for (let i = 0; i < names.length; i++) {
+        document.write(names[i] + " ");
+      }
+      document.write("<br>");
+      let longest = 0; // 가장 긴 이름을 가진 원소의 인덱스
+      let maxLen = 0; // 가장 긴 이름의 길이
+      for (let i = 0; i < names.length; i++) {
+        if (maxLen < names[i].length) {
+          longest = i; // 만약 i번째 원소가 가장 긴 이름을 가졌다면 longest 에 저장
+          maxLen = names[i].length; // 만약 i번째 원소가 가장 긴 이름을 가졌다면 그 길이를 저장
+        }
+      }
+      document.write("가장 긴 이름 : " + names[longest] + "<br>");
+      names.sort(); // 사전순으로 정렬한 후에 맨 앞의 원소를 가져오면 된다.
+      document.write("가장 먼저나오는 이름 : " + names[0] + "<br>");
+      document.write("증가순 이름 : ");
+      for (let i = 0; i < names.length; i++) {
+        document.write(names[i] + " ");
+      }
+    </script>
+  </body>
+</html>

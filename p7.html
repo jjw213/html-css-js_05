@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function equal() {
+        let pw = "you";
+        let input;
+        while (true) {
+          // 무한 반복
+          input = prompt("암호를 대라!");
+          if (input === pw) {
+            document.write("<h1>통과!</h1>");
+            break;
+          }
+        }
+        // do {
+        //   input = prompt("암호를 대라!");
+        //   if (input === pw) {
+        //     document.write("<h1>통과!</h1>");
+        //     break;
+        //   }
+        // } while (true);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>암호를 입력하라!</h1>
+    <hr />
+    <script>
+      equal();
+    </script>
+  </body>
+</html>

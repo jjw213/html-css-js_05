@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>난수 10개 생성</h3>
+    <hr />
+    <script>
+      let plots = []; // 배열선언
+      for (let i = 0; i < 10; i++) {
+        // 난수 10개 배열에 저장
+        // 난수의 범위 1에서 100 (100포함)
+        // 자바스크립트의 배열은 크기가 자동으로 늘어난다.
+        plots[i] = Math.floor(Math.random() * 100 + 1);
+      }
+      for (let i = 0; i < 10; i++) {
+        document.write(plots[i] + " ");
+      }
+      document.write("<hr>");
+      let big = -1; // 배열에서 가장 큰 수를 저장
+      //let small = 101; // 배열에서 가장 작은수를 저장
+      for (let i = 0; i < 10; i++) {
+        // 큰수 찾기
+        // big 보다 plots가 커서 big에 넣어도된다.
+        if (big < plots[i]) {
+          big = plots[i]; //big = -1, plots[0] = 62; => big = 62
+        }
+        // // big 보다 plots가 커서 big에 넣어도된다.
+        // big = plots[1]; //big = 62 , plots[1] = 99; => big = 99
+
+        // // big 보다 plots가 작으면 big에 넣으면안된다.
+        // if(big < plots[2])
+        // big = plots[2]; //big = 99 , plots[2] = 37; => big = 99
+      }
+      document.write("제일 큰 수는 " + big);
+      document.write("<hr>");
+      plots.sort(); // sort()의 기준 => 문자열 사전순으로 정렬한다.
+      for (let i = 0; i < 10; i++) {
+        document.write(plots[i] + " ");
+      }
+      document.write("<br>");
+      // 크기순으로 정렬하는 방법 (오름차순) 작은게 앞으로온다.
+      for (let i = 0; i < 10; i++) {
+        let smallIndex = i; // 작은 원소의 인덱스 저장
+        for (let j = i + 1; j < 10; j++) {
+          // i와 인접한 원소 부터 비교시작
+          if (i != j) {
+            if (plots[smallIndex] > plots[j]) {
+              //num1 = plots[i];
+              smallIndex = j;
+
+              //원소의 위치를 바꾸기
+              let temp = plots[smallIndex];
+              plots[smallIndex] = plots[i];
+              plots[i] = temp;
+            }
+          }
+        }
+      }
+
+      for (let i = 0; i < 10; i++) {
+        document.write(plots[i] + " ");
+      }
+    </script>
+  </body>
+</html>

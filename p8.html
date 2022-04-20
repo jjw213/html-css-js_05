@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function useEval() {
+        // eval() 함수를 사용
+        // eval(문자열) => 문자열이 표현하는 식을 그대로 실행시켜 준다.
+        // 문자열이 "2+12*8-20/7" => eval("2+12*8-20/7")
+        let exp = prompt("수식 입력"); // 사용자가 prompt 창에 수식을 입력
+        document.write(exp + " = " + eval(exp));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>eval()로 수식 계산</h1>
+    <hr />
+    <script>
+      useEval();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>String 객체 활용</h1>
+    <hr />
+    <script>
+      let a = new String("Boys and Girls"); // let a = "Boys and Girls";
+      let b = "!!";
+      document.write("a : " + a + "<br>");
+      document.write("b : " + b + "<br>");
+      document.write("<hr/>");
+      document.write(a.charAt(0) + "<br>"); // charAt() : 문자열 a의 0번째 위치에 있는 문자
+      document.write(a.concat(b, "입니다.") + "<br>"); // concat() 문자열 이어붙이기
+      //a.concat(b , c, d) = a + b + c + d
+      // "Boys and Girls" + "!!" + "입니다."
+      document.write(a.indexOf("s") + "<br>"); // indexOf(x) : 문자열 a안에있는 제일처음 x 문자의 위치
+      document.write(a.indexOf("And") + "<br>"); // 해당 문자열을 찾지못하면 -1 리턴
+      document.write("<hr/>");
+      document.write(a.slice(5, 8) + "<br>"); // slice (x, y) : 문자열 x 위치부터 y-1 위치 까지 잘라낸다.
+      document.write(a.substr(5, 3) + "<br>"); // substr (x, y) : 문자열 x 위치부터 y개 까지 잘라낸다.
+      document.write(a.replace("and", "or") + "<br>");
+      // replace(a , b) : 문자열 a를 b로 대체한다.
+      let sub = a.split(" "); // split(x) : 문자열을 x 를 기준으로 분리한다.
+      // stringtokenizer() => "sss sss sss" => "sss" , "sss" , "sss"
+      // split("y") => "sssysssysssy" =? "sss", "sss", "sss"
+      for (let i = 0; i < sub.length; i++) {
+        document.write("sub " + i + " = " + sub[i] + "<br>");
+      }
+      let a2 = "    abc &nbsp&nbspd";
+      document.write(a2.trim()); //문자열 양쪽의 공백 제거 (사이에 있는 공백은 제거 안함)
+      // String 메소드 (함수) 실행하고나서 그 자체에는 전부 변함이 없다.
+    </script>
+  </body>
+</html>

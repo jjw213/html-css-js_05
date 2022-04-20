@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let random = Math.random(); // 0~0.99999999... 까지의 수 반환
+      // 그래서 우리가 원하는 범위내의 숫자를 임의적으로 얻으려면? * (원하는숫자 + 1)
+      // 예를들어서 0~100까지
+      for (let i = 0; i < 100; i++) {
+        random = Math.random() * 101;
+        document.write(Math.floor(random) + "<br>"); //floor() => 바닥함수 , 소수점버림
+        //round() : 반올림
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

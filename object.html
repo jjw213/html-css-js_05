@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let account = {
+        //계좌 객체
+        owner: "신민석",
+        accountNumber: "111-2222",
+        balance: "50000",
+        deposit: function () {
+          // 입금
+        },
+        withdraw: function () {
+          // 출금
+        },
+      };
+      /*
+        자바스크립트 객체의 종류 (Document Object Model) (Browser Object Model)
+        코어객체 : 자바에서 사용했던 Math, String, Array, Date
+        HTML DOM : HTML TAG 객체
+        브라우저 관련 객체 (BOM) : 브라우저 관련 객체
+      */
+      let today = new Date(); // 시간 정보를 다루는 Date 객체
+      document.write("현재 시간 : " + today.toLocaleString() + "<br>");
+      let msg = "HTML5, CSS3 공부하기";
+      let msg2 = new String("자바스크립트 공부하기");
+      document.write("msg 의 내용 : " + msg + "<br>");
+      document.write("msg 의 길이 : " + msg.length + "<br>");
+      document.write("msg2 의 내용 : " + msg2 + "<br>");
+      document.write("msg2 의 길이 : " + msg2.length + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

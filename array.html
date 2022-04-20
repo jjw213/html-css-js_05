@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let cities = ["서울", "뉴욕", "파리"]; // 배열의 크기 : 3 / 사용가능한 인덱스 : 0~2
+      // 배열의크기가 n 이면 사용가능한 인덱스의 범위는 0 ~ n-1
+      let name = cities[0]; // cities 라는 배열의 0번째 인덱스에 있는 원소 "서울"
+
+      let numbers = [1, 2, 3, 4, 5]; // 자바스크립트에서는 배열을 선언할때 {} 가아니라 [] 사용
+      let sum = 0; // 총합을 구하는 반복문
+      numbers[5] = 6; // 자바스크립트의 배열은 크기가 고정이 아니다. 추가하면 늘어난다.
+      for (let i = 0; i < 6; i++) {
+        sum += numbers[i]; // sum에 numbers 배열안의 원소들의 누적합 저장
+        // i =0  sum   =  sum + numbers[0]   1 = 0 + 1
+        // i =1  sum   =  sum + numbers[1]   3 = 1 + 2
+      }
+      document.write("합은 : " + sum);
+      let week = new Array("월", "화", "수", "목", "금", "토", "일");
+      // let week = ["월", "화", "수", "목", "금", "토", "일"];
+      //   week = new Array(7); // 크기가 7인 배열 생성 (초기화 되지않은것은 자바와 똑같다.)
+      //   week[0] = "월";
+      //   week = new Array(); // 이렇게 선언할수 있는 이유? => 자바스크립트 배열의 크기는 늘어남
+      let any = new Array(5); // 자바스크립트의 배열은 여러타입의 데이터가 섞여서 저장될수 있다.
+      any[0] = 0;
+      any[1] = "문자열";
+      any[2] = new Date();
+      any[3] = function f() {};
+    </script>
+  </head>
+  <body></body>
+</html>
